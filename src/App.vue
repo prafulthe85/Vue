@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from "vue";
-import TaskInput from "./components/TaskInput.vue";
-import TaskList from "./components/TaskList.vue";
+// import { ref } from "vue";
+// import TaskInput from "./components/TaskInput.vue";
+// import TaskList from "./components/TaskList.vue";
 // import Navbar from "./components/Navbar.vue";
 // const count = ref(0);
 // const increment = () => {
@@ -16,14 +16,14 @@ import TaskList from "./components/TaskList.vue";
 //   { id: 3, name: "Charlie" },
 // ];
 
-const tasks = ref([]);
-const addTask = (task) => {
-  tasks.value.push(task);
-};
+// const tasks = ref([]);
+// const addTask = (task) => {
+//   tasks.value.push(task);
+// };
 
-const removeTask = (index) => {
-  tasks.value.splice(index, 1);
-};
+// const removeTask = (index) => {
+//   tasks.value.splice(index, 1);
+// };
 </script>
 <template>
   <!-- <input v-model="name" />
@@ -39,13 +39,13 @@ const removeTask = (index) => {
   <h1 v-else>Not Visible</h1> -->
   <!-- <Navbar /> -->
 
-  <div class="app">
+  <!-- <div class="app">
     <h1>Todo App</h1>
     <TaskInput @add-task="addTask" />
     <p>Total tasks: {{ tasks.length }}</p>
 
     <TaskList :tasks="tasks" @remove-task="removeTask" />
-  </div>
+  </div> -->
 </template>
 
 <style>
