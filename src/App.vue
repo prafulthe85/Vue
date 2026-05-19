@@ -1,8 +1,9 @@
 <script setup>
-// import { ref } from "vue";
+import { ref, computed } from "vue";
 // import TaskInput from "./components/TaskInput.vue";
 // import TaskList from "./components/TaskList.vue";
 // import Navbar from "./components/Navbar.vue";
+import UserCard from "./components/UserCard.vue";
 // const count = ref(0);
 // const increment = () => {
 //   count.value++;
@@ -24,6 +25,12 @@
 // const removeTask = (index) => {
 //   tasks.value.splice(index, 1);
 // };
+const firstname = ref("Praful");
+const lastname = ref("Shinde");
+
+const fullname = computed(() => {
+  return `${firstname.value} ${lastname.value}`;
+});
 </script>
 <template>
   <!-- <input v-model="name" />
@@ -46,6 +53,8 @@
 
     <TaskList :tasks="tasks" @remove-task="removeTask" />
   </div> -->
+  <!-- <UserCard name="Praful" age="24" /> -->
+  <UserCard :name="fullname" age="24" />
 </template>
 
 <style>
