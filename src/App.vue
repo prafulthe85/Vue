@@ -1,26 +1,30 @@
+<script setup>
+import { ref } from "vue";
+// const count = ref(0);
+// const name = ref("");
+const toShow = ref(true);
+
+// const users = [
+//   { id: 1, name: "Praful" },
+//   { id: 2, name: "Rahul" },
+//   { id: 3, name: "Charlie" },
+// ];
+</script>
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue App" />
+  <!-- <input v-model="name" />
+  <button @click="count++">Count: {{ count }}</button>
+  <h1>Hello {{ name }}</h1> -->
+  <!-- <div v-for="user in users" :key="user.id">
+    <h2>{{ user.name }}</h2>
+  </div> -->
+  <button @click="toShow = !toShow">Toggle</button>
+
+  <h1 v-if="toShow">Visible</h1>
+  <h1 v-else>Not Visible</h1>
 </template>
 
-<script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-};
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+h1 {
+  color: blue;
 }
 </style>
